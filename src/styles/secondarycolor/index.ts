@@ -1,0 +1,1 @@
+export default 'rgb(0, 120, 141);';
