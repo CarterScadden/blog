@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import SECONDARY_COLOR from '../../styles/secondarycolor'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -10,8 +11,9 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '60px',
       backgroundColor: SECONDARY_COLOR,
       display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'space-between',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      flexDirection: 'row',
       padding: '0em 1em',
     },
   })
@@ -24,6 +26,10 @@ const CustomAppBar:React.FC = () => {
       <header>
         <h1>Carter Scadden</h1>
       </header>
+      
+      <nav>
+        <Link to="/posts" >posts</Link>
+      </nav>
     </AppBar>
   );
 };
