@@ -5,16 +5,18 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import SECONDARY_COLOR from '../../styles/secondarycolor'
 import { Link } from 'react-router-dom';
 
+export const headerHeight = 60;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     bar: {
-      height: '60px',
+      height: `${headerHeight}px`,
       backgroundColor: SECONDARY_COLOR,
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
       flexDirection: 'row',
       padding: '0em 1em',
+      position: 'relative',
     },
   })
 );
@@ -28,7 +30,7 @@ const CustomAppBar:React.FC = () => {
       </header>
       
       <nav>
-        <Link to="/posts" >posts</Link>
+        <Link to="/post" >post</Link>
       </nav>
     </AppBar>
   );
